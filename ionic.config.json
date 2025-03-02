@@ -1,0 +1,7 @@
+{
+  "name": "g4-bank",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
