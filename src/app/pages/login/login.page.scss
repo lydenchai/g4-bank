@@ -7,12 +7,9 @@
   justify-content: space-between;
   text-align: center;
   padding: 50px 20px;
-  // background: url("https://asset.aeu.cloud/images/wave.png") center/cover
-  //   no-repeat;
   position: relative;
 }
 
-/* Gradient overlay for better readability */
 .onboarding-container::before {
   content: "";
   position: absolute;
@@ -20,23 +17,22 @@
   left: 0;
   width: 100%;
   height: 100%;
-  // background: linear-gradient(to top, rgba(0, 0, 0, 0.713), transparent);
   background: linear-gradient(135deg, #024260, #000000);
   z-index: 1;
 }
 
 .onboarding-content {
-  margin-top: 90px;
+  margin-top: 60px;
   position: relative;
   z-index: 2;
   display: flex;
-  flex-direction: column;
   align-items: center;
+  flex-direction: column;
   gap: 15px;
 }
 
 img {
-  width: 120px;
+  width: 100px;
   height: auto;
   animation: fadeIn 1s ease-in-out;
 }
@@ -46,7 +42,6 @@ img {
   line-height: 50px;
   font-weight: bold;
   color: white;
-  margin-top: 20px;
   animation: slideUp 1s ease-in-out;
 }
 
@@ -73,11 +68,25 @@ button {
   z-index: 2;
 }
 
+.sign-up {
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.844);
+
+  span {
+    margin-left: 5px;
+    color: #0b6996;
+  }
+}
+
 /* Animations */
 @keyframes fadeIn {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -88,6 +97,7 @@ button {
     transform: translateY(30px);
     opacity: 0;
   }
+
   to {
     transform: translateY(0);
     opacity: 1;
