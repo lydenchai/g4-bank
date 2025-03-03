@@ -1,27 +1,18 @@
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense" class="ion-padding-top">
-    <ion-toolbar>
-      <ion-title size="large">Transactions</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div class="header ion-padding">
+    <ion-header collapse="condense">
+      <ion-toolbar class="ion-no-padding">
+        <h4>Transactions</h4>
+      </ion-toolbar>
+    </ion-header>
+  </div>
   <h6 class="ion-padding-start ion-no-margin">Today</h6>
   <ion-card class="transaction-content">
     <ion-card-content>
       <ion-list>
         @for (transaction of todayTransactions; track $index) {
-        <ion-item lines="none">
-          <ion-avatar slot="start">
-            <img alt="Silhouette of mountains" [src]="transaction.profile" />
-          </ion-avatar>
-          <div
-            [class]="todayTransactions.length === 1 || $index === todayTransactions.length - 1 ? 'last-transaction':'transaction'">
-            <div>
-              <ion-label slot="start">{{transaction.name}}</ion-label>
-            </div>
-            <ion-label slot="end" [color]="transaction.amount > 1 ? 'success' : 'danger'">{{transaction.amount}}
-              USD</ion-label>
-          </div>
-        </ion-item>
+        <app-transaction-card [data]="transaction"
+          [lastIndex]="todayTransactions.length === 1 || $index === todayTransactions.length - 1"></app-transaction-card>
         }
       </ion-list>
     </ion-card-content>
@@ -31,19 +22,8 @@
     <ion-card-content>
       <ion-list>
         @for (transaction of yesterdayTransactions; track $index) {
-        <ion-item lines="none">
-          <ion-avatar slot="start">
-            <img alt="Silhouette of mountains" [src]="transaction.profile" />
-          </ion-avatar>
-          <div
-            [class]="yesterdayTransactions.length === 1 || $index === yesterdayTransactions.length - 1 ? 'last-transaction':'transaction'">
-            <div>
-              <ion-label slot="start">{{transaction.name}}</ion-label>
-            </div>
-            <ion-label slot="end" [color]="transaction.amount > 1 ? 'success' : 'danger'">{{transaction.amount}}
-              USD</ion-label>
-          </div>
-        </ion-item>
+        <app-transaction-card [data]="transaction"
+          [lastIndex]="yesterdayTransactions.length === 1 || $index === yesterdayTransactions.length - 1"></app-transaction-card>
         }
       </ion-list>
     </ion-card-content>
@@ -53,19 +33,8 @@
     <ion-card-content>
       <ion-list>
         @for (transaction of fistOfMatchTransactions; track $index) {
-        <ion-item lines="none">
-          <ion-avatar slot="start">
-            <img alt="Silhouette of mountains" [src]="transaction.profile" />
-          </ion-avatar>
-          <div
-            [class]="fistOfMatchTransactions.length === 1 || $index === fistOfMatchTransactions.length - 1 ? 'last-transaction':'transaction'">
-            <div>
-              <ion-label slot="start">{{transaction.name}}</ion-label>
-            </div>
-            <ion-label slot="end" [color]="transaction.amount > 1 ? 'success' : 'danger'">{{transaction.amount}}
-              USD</ion-label>
-          </div>
-        </ion-item>
+        <app-transaction-card [data]="transaction"
+          [lastIndex]="fistOfMatchTransactions.length === 1 || $index === fistOfMatchTransactions.length - 1"></app-transaction-card>
         }
       </ion-list>
     </ion-card-content>

@@ -8,13 +8,12 @@ import {
   IonGrid,
   IonRow,
   IonCol,
-  IonItem,
-  IonLabel,
   IonList,
 } from '@ionic/angular/standalone';
 import { Card } from 'src/app/types/card';
 import { Transaction } from 'src/app/types/transaction';
 import { Menu } from 'src/app/types/menu';
+import { TransactionCardComponent } from '../shares/transaction-card/transaction-card.component';
 
 @Component({
   selector: 'app-banking',
@@ -23,8 +22,6 @@ import { Menu } from 'src/app/types/menu';
   standalone: true,
   imports: [
     IonList,
-    IonLabel,
-    IonItem,
     IonCol,
     IonRow,
     IonGrid,
@@ -33,6 +30,7 @@ import { Menu } from 'src/app/types/menu';
     IonIcon,
     IonAvatar,
     IonContent,
+    TransactionCardComponent,
   ],
 })
 export class BankingPage implements OnInit {

@@ -32,10 +32,6 @@
  * https://ionicframework.com/docs/theming/dark-mode
  */
 
-/* @import "@ionic/angular/css/palettes/dark.always.css"; */
-/* @import "@ionic/angular/css/palettes/dark.class.css"; */
-// @import '@ionic/angular/css/palettes/dark.system.css';
-
 html,
 body {
   box-sizing: border-box;
@@ -57,6 +53,32 @@ h4 {
   border: 0.1px solid #eee;
 }
 
-// ion-content {
-//   background: #ffffffaf;
-// }
+.transaction-content {
+  ion-card-content {
+    padding: 14px;
+  }
+
+  ion-item {
+    --padding-start: 0;
+    --inner-padding-end: 0px;
+  }
+
+  .transaction {
+    width: 100%;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 0;
+    border-bottom: 0.5px solid #dfdfdf;
+  }
+
+  .last-transaction {
+    width: 100%;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 0;
+  }
+}

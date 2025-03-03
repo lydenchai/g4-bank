@@ -174,25 +174,6 @@
   }
 }
 
-.transaction-content {
-  ion-card-content {
-    padding: 14px;
-  }
-
-  ion-item {
-    --padding-start: 0;
-    --inner-padding-end: 0px;
-
-    .transaction {
-      width: 100%;
-      font-size: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-  }
-}
-
 .promotion-container {
   width: 100%;
   height: 100px;

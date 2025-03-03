@@ -1,19 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
 import {
   IonContent,
   IonHeader,
-  IonTitle,
   IonToolbar,
   IonCard,
   IonCardContent,
   IonList,
-  IonItem,
-  IonAvatar,
-  IonLabel,
 } from '@ionic/angular/standalone';
 import { Transaction } from 'src/app/types/transaction';
+import { TransactionCardComponent } from '../shares/transaction-card/transaction-card.component';
 
 @Component({
   selector: 'app-transaction',
@@ -21,18 +16,13 @@ import { Transaction } from 'src/app/types/transaction';
   styleUrls: ['./transaction.page.scss'],
   standalone: true,
   imports: [
-    IonLabel,
-    IonAvatar,
-    IonItem,
     IonList,
     IonCardContent,
     IonCard,
     IonContent,
     IonHeader,
-    IonTitle,
     IonToolbar,
-    CommonModule,
-    FormsModule,
+    TransactionCardComponent,
   ],
 })
 export class TransactionPage implements OnInit {

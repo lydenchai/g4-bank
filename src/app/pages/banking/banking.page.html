@@ -70,20 +70,8 @@
     <ion-card-content>
       <ion-list>
         @for (transaction of transactions; track $index) {
-        <!-- <ion-item lines="none"> -->
-        <ion-item [lines]="transactions.length === 1 || $index === transactions.length - 1 ? 'none' : 'full'">
-          <ion-avatar slot="start">
-            <img alt="Silhouette of mountains" [src]="transaction.profile" />
-          </ion-avatar>
-          <div class="transaction">
-            <div>
-              <ion-label slot="start">{{transaction.name}}</ion-label>
-              <!-- <span>02 March 2025</span> -->
-            </div>
-            <ion-label slot="end" [color]="transaction.amount > 1 ? 'success' : 'danger'">{{transaction.amount}}
-              USD</ion-label>
-          </div>
-        </ion-item>
+        <app-transaction-card [data]="transaction"
+          [lastIndex]="transactions.length === 1 || $index === transactions.length - 1"></app-transaction-card>
         }
       </ion-list>
     </ion-card-content>
