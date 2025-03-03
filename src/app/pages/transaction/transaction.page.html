@@ -6,37 +6,17 @@
       </ion-toolbar>
     </ion-header>
   </div>
-  <h6 class="ion-padding-start ion-no-margin">Today</h6>
+
+  @for (section of transactionSections; track $index) {
+  <h6 class="ion-padding-start ion-no-margin">{{ section.title }}</h6>
   <ion-card class="transaction-content">
     <ion-card-content>
       <ion-list>
-        @for (transaction of todayTransactions; track $index) {
+        @for (transaction of section.transactions; track $index) {
         <app-transaction-card [data]="transaction"
-          [lastIndex]="todayTransactions.length === 1 || $index === todayTransactions.length - 1"></app-transaction-card>
+          [lastIndex]="isLastTransaction(section.transactions, $index)"></app-transaction-card>
         }
       </ion-list>
     </ion-card-content>
-  </ion-card>
-  <h6 class="ion-padding-start ion-no-margin">Yesterday</h6>
-  <ion-card class="transaction-content">
-    <ion-card-content>
-      <ion-list>
-        @for (transaction of yesterdayTransactions; track $index) {
-        <app-transaction-card [data]="transaction"
-          [lastIndex]="yesterdayTransactions.length === 1 || $index === yesterdayTransactions.length - 1"></app-transaction-card>
-        }
-      </ion-list>
-    </ion-card-content>
-  </ion-card>
-  <h6 class="ion-padding-start ion-no-margin">01 March</h6>
-  <ion-card class="transaction-content">
-    <ion-card-content>
-      <ion-list>
-        @for (transaction of fistOfMatchTransactions; track $index) {
-        <app-transaction-card [data]="transaction"
-          [lastIndex]="fistOfMatchTransactions.length === 1 || $index === fistOfMatchTransactions.length - 1"></app-transaction-card>
-        }
-      </ion-list>
-    </ion-card-content>
-  </ion-card>
+  </ion-card> }
 </ion-content>
