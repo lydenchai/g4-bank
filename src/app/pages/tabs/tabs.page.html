@@ -1,0 +1,23 @@
+<ion-tabs>
+  @if (showTabs) {
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="home" [routerLink]="['/home']" routerLinkActive="router-link-active"
+      [routerLinkActiveOptions]="{ exact: true }">
+      <ion-icon [name]="isActive('/home') ? 'grid' : 'grid-outline'"></ion-icon>
+      <ion-label>Banking</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="transaction" [routerLink]="['/transaction']" routerLinkActive="router-link-active"
+      [routerLinkActiveOptions]="{ exact: true }">
+      <ion-icon [name]="isActive('/transaction') ? 'receipt' : 'receipt-outline'"></ion-icon>
+      <ion-label>Transaction</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="account" [routerLink]="['/account']" routerLinkActive="router-link-active"
+      [routerLinkActiveOptions]="{ exact: true }">
+      <ion-icon [name]="isActive('/account') ? 'person' : 'person-outline'"></ion-icon>
+      <ion-label>Account</ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
+  }
+</ion-tabs>

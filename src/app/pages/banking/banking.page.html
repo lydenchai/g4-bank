@@ -1,0 +1,91 @@
+<ion-content [fullscreen]="true">
+  <div class="head-content">
+    <div class="header ion-padding">
+      <div class="profile">
+        <ion-avatar aria-hidden="true">
+          <img alt=""
+            src="https://static.next-episode.net/actor-images/roles/86/a-female-student-arrives-at-the-imperial-college.sang-qi.jpg" />
+        </ion-avatar>
+        <div>
+          <h6>Welcome back 👋</h6>
+          <h5>Zhao Lusi</h5>
+        </div>
+      </div>
+      <div class="head-btn">
+        <button slot="end" class="notification">
+          <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
+        </button>
+        <button slot="end" class="notification">
+          <ion-icon name="notifications-outline"></ion-icon>
+        </button>
+      </div>
+    </div>
+    <div class="card-container">
+      @for (card of cards; track $index) {
+      <div class="card">
+        <div class="card-header">
+          <span class="card-type ion-text-capitalize">{{ card.type }}</span>
+          <ion-icon
+            [name]="card.type ==='payroll' ? 'cash-outline' : (card.type ==='saving' ? 'wallet-outline' :'wifi-outline')"></ion-icon>
+        </div>
+        <div class="card-number">{{ card.number }}</div>
+        <div class="card-footer">
+          <div class="card-holder">{{ card.holder }}</div>
+          <div class="expiry-date">{{ card.expiryDate }}</div>
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+  <ion-grid class="ion-padding">
+    <ion-row>
+      @for (item of menuItems; track $index) {
+      <ion-col size="4">
+        <ion-card class="ion-no-margin card-item">
+          <ion-card-content class="ion-no-padding">
+            <ion-icon [name]="item.icon" size="large"></ion-icon>
+            <p>{{ item.label }}</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      }
+    </ion-row>
+  </ion-grid>
+  <h6 class="ion-padding-start ion-no-margin">News & Promotions</h6>
+  <div class="ion-no-padding ion-margin">
+    <div class="promotion-container" #scrollContainer>
+      <div class="promotion-content" #scrollTrack>
+        @for (item of newsAndPromotions; track $index) {
+        <img alt="Promotion Image" class="promotion-image" [src]="item.image" />
+        }
+        <!-- Duplicate images to create seamless loop -->
+        @for (item of newsAndPromotions; track $index) {
+        <img alt="Promotion Image" class="promotion-image" [src]="item.image" />
+        }
+      </div>
+    </div>
+  </div>
+  <h6 class="ion-padding-start ion-no-margin">Recent transaction</h6>
+  <ion-card class="transaction-content">
+    <ion-card-content>
+      <ion-list>
+        @for (transaction of transactions; track $index) {
+        <!-- <ion-item lines="none"> -->
+        <ion-item [lines]="transactions.length === 1 || $index === transactions.length - 1 ? 'none' : 'full'">
+          <ion-avatar slot="start">
+            <img alt="Silhouette of mountains" [src]="transaction.profile" />
+          </ion-avatar>
+          <div class="transaction">
+            <div>
+              <ion-label slot="start">{{transaction.name}}</ion-label>
+              <!-- <span>02 March 2025</span> -->
+            </div>
+            <ion-label slot="end" [color]="transaction.amount > 1 ? 'success' : 'danger'">{{transaction.amount}}
+              USD</ion-label>
+          </div>
+        </ion-item>
+        }
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

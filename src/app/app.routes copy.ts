@@ -22,21 +22,33 @@ export const routes: Routes = [
           {
             path: '',
             loadComponent: () =>
-              import('./pages/banking/banking.page').then((m) => m.BankingPage),
+              import('./pages/news-list/news-list.page').then(
+                (m) => m.NewsListPage
+              ),
           },
         ],
       },
       {
-        path: 'transaction',
+        path: 'news/:id',
         loadComponent: () =>
-          import('./pages/transaction/transaction.page').then(
-            (m) => m.TransactionPage
+          import('./pages/news-detail/news-detail.page').then(
+            (m) => m.NewsDetailPage
           ),
       },
       {
-        path: 'account',
+        path: 'discover',
         loadComponent: () =>
-          import('./pages/account/account.page').then((m) => m.AccountPage),
+          import('./pages/discover/discover.page').then((m) => m.DiscoverPage),
+      },
+      {
+        path: 'favorite',
+        loadComponent: () =>
+          import('./pages/favorite/favorite.page').then((m) => m.FavoritePage),
+      },
+      {
+        path: 'profile',
+        loadComponent: () =>
+          import('./pages/profile/profile.page').then((m) => m.ProfilePage),
       },
     ],
   },
