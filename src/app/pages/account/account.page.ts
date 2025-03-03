@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { RouterLink } from '@angular/router';
 import {
   IonAvatar,
   IonContent,
@@ -27,7 +26,6 @@ import {
     IonList,
     IonToolbar,
     IonCard,
-    RouterLink,
   ],
 })
 export class AccountPage implements OnInit {

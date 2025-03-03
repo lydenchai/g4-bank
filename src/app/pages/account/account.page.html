@@ -9,9 +9,11 @@
     <ion-toolbar class="ion-no-padding">
       <div class="header-container ion-padding">
         <ion-avatar aria-hidden="true" class="ion-margin">
-          <img alt="profile" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+          <img alt="profile"
+            src="https://static.next-episode.net/actor-images/roles/86/a-female-student-arrives-at-the-imperial-college.sang-qi.jpg" />
         </ion-avatar>
-        <h4>Dev</h4>
+        <h4>Zhao Lusi</h4>
+        <p>App ID: 918932</p>
       </div>
     </ion-toolbar>
   </ion-header>
@@ -19,32 +21,57 @@
     <ion-list lines="none">
       <ion-item>
         <div class="icon save">
-          <ion-icon aria-hidden="true" name="bookmark" slot="start"></ion-icon>
+          <ion-icon aria-hidden="true" name="person-outline" slot="start"></ion-icon>
         </div>
-        <ion-label [routerLink]="['/favorite']">Saved News</ion-label>
+        <ion-label>My Profile</ion-label>
+        <ion-icon name="chevron-forward-outline"></ion-icon>
       </ion-item>
+    </ion-list>
+  </ion-card>
+  <ion-card>
+    <ion-list lines="none">
       <ion-item>
         <div class="icon notification">
-          <ion-icon aria-hidden="true" name="notifications" slot="start"></ion-icon>
+          <ion-icon aria-hidden="true" name="lock-closed-outline" slot="start"></ion-icon>
         </div>
-        <ion-label>Notifications</ion-label>
+        <ion-label>Security</ion-label>
+        <ion-icon name="chevron-forward-outline"></ion-icon>
       </ion-item>
+    </ion-list>
+  </ion-card>
+  <ion-card>
+    <ion-list lines="none">
       <ion-item>
         <div class="icon language">
           <ion-icon aria-hidden="true" name="globe" slot="start"></ion-icon>
         </div>
         <ion-label>Language</ion-label>
+        <div style="display: flex;">
+          <ion-label style="color: #dbdbdb;">English</ion-label>
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+        </div>
       </ion-item>
     </ion-list>
   </ion-card>
-
+  <ion-card>
+    <ion-list lines="none">
+      <ion-item>
+        <div class="icon language">
+          <ion-icon aria-hidden="true" name="call-outline" slot="start"></ion-icon>
+        </div>
+        <ion-label>Contact Us</ion-label>
+        <ion-icon name="chevron-forward-outline"></ion-icon>
+      </ion-item>
+    </ion-list>
+  </ion-card>
   <ion-card>
     <ion-list lines="none">
       <ion-item>
         <div class="icon question">
-          <ion-icon aria-hidden="true" name="chatbubble-ellipses" slot="start"></ion-icon>
+          <ion-icon aria-hidden="true" name="reader-outline" slot="start"></ion-icon>
         </div>
-        <ion-label>Ask a Question</ion-label>
+        <ion-label>Term & Condition</ion-label>
+        <ion-icon name="chevron-forward-outline"></ion-icon>
       </ion-item>
     </ion-list>
   </ion-card>
