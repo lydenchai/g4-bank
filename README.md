@@ -3,13 +3,6 @@
 ## Overview
 This is a mobile application built using **Ionic Framework** with **Angular 19**. The app provides a banking dashboard with account management, transaction history, and promotional offers.
 
-## Features
-- **Banking Dashboard**: View account details, transaction history, and more.
-- **Interactive UI**: Built with Ionic components for a seamless experience.
-- **Auto Scrolling Promotions**: Displaying news and promotions dynamically.
-- **Responsive Design**: Optimized for mobile devices.
-- **Navigation & Routing**: Uses Angular's router for page navigation.
-
 ## Tech Stack
 - **Ionic Framework** (Latest Version)
 - **Angular 19**
@@ -26,8 +19,8 @@ Ensure you have the following installed:
 ### Steps to Set Up the Project
 1. Clone the repository:
    ```sh
-   git clone <repo-url>
-   cd <project-folder>
+   git clone https://github.com/lydenchai/g4-bank
+   cd g4-bank
    ```
 2. Install dependencies:
    ```sh
