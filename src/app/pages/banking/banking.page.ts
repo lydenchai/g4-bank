@@ -5,11 +5,7 @@ import {
   IonIcon,
   IonCard,
   IonCardContent,
-  IonGrid,
-  IonRow,
-  IonCol,
-  IonList,
-} from '@ionic/angular/standalone';
+  IonList, IonGrid, IonRow, IonCol } from '@ionic/angular/standalone';
 import { Card } from 'src/app/types/card';
 import { Transaction } from 'src/app/types/transaction';
 import { Menu } from 'src/app/types/menu';
@@ -20,11 +16,8 @@ import { TransactionCardComponent } from '../shares/transaction-card/transaction
   templateUrl: './banking.page.html',
   styleUrls: ['./banking.page.scss'],
   standalone: true,
-  imports: [
+  imports: [IonCol, IonRow, IonGrid, 
     IonList,
-    IonCol,
-    IonRow,
-    IonGrid,
     IonCardContent,
     IonCard,
     IonIcon,
