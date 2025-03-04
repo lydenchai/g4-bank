@@ -41,7 +41,7 @@
     <ion-row>
       @for (item of menuItems; track $index) {
       <ion-col size="4">
-        <ion-card class="ion-no-margin card-item">
+        <ion-card class="ion-no-margin card-item" [routerLink]="item.route">
           <ion-card-content class="ion-no-padding">
             <ion-icon [name]="item.icon" size="large"></ion-icon>
             <p>{{ item.label }}</p>

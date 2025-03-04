@@ -27,6 +27,20 @@ export const routes: Routes = [
         ],
       },
       {
+        path: 'account-list',
+        loadComponent: () =>
+          import('./pages/account-list/account-list.page').then(
+            (m) => m.AccountListPage
+          ),
+      },
+      {
+        path: 'account-detail',
+        loadComponent: () =>
+          import('./pages/account-detail/account-detail.page').then(
+            (m) => m.AccountDetailPage
+          ),
+      },
+      {
         path: 'transaction',
         loadComponent: () =>
           import('./pages/transaction/transaction.page').then(

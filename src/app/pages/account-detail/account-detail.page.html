@@ -1,0 +1,23 @@
+<ion-content [fullscreen]="true">
+  <div class="head-content">
+    <div class="header ion-padding">
+      <ion-buttons>
+        <ion-icon name="chevron-back-outline" routerLink="../account-list"></ion-icon>
+        <ion-label>Account Details</ion-label>
+      </ion-buttons>
+    </div>
+  </div>
+  @for (section of transactionSections; track $index) {
+  <h6 class="ion-padding-start ion-no-margin">{{ section.title }}</h6>
+  <ion-card class="transaction-content">
+    <ion-card-content>
+      <ion-list>
+        @for (transaction of section.transactions; track $index) {
+        <app-transaction-card [data]="transaction"
+          [lastIndex]="isLastTransaction(section.transactions, $index)"></app-transaction-card>
+        }
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+  }
+</ion-content>

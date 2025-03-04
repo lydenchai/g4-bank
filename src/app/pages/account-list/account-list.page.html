@@ -1,0 +1,39 @@
+<ion-content [fullscreen]="true">
+  <div class="head-content">
+    <div class="header ion-padding">
+      <ion-buttons>
+        <ion-icon name="chevron-back-outline" routerLink="../home"></ion-icon>
+        <ion-label>Accounts</ion-label>
+      </ion-buttons>
+      <div class="balance">
+        <div class="summary">
+          <ion-icon name="wallet-outline"></ion-icon>
+        </div>
+        <div class="total-amount">
+          <div class="balance-item">
+            <ion-label class="label-title">Total in USD</ion-label>
+            <ion-label class="label-amount">$ {{ formatNumber(totalUSD) }}</ion-label>
+          </div>
+          <div class="divider"></div>
+          <div class="balance-item">
+            <ion-label class="label-title">Total in KHR</ion-label>
+            <ion-label class="label-amount">៛ {{ formatNumber(totalKHR) }}</ion-label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card-container">
+    @for (account of accounts; track $index) {
+    <ion-card routerLink="../account-detail">
+      <ion-item lines="none" [style.border-left]="'10px solid ' +  account.color">
+        <ion-label>
+          <span>{{ account.name }}</span>
+          <p>{{ account.number }} | {{ account.name }}</p>
+        </ion-label>
+        <p>{{ formatNumber(account.balance) }} {{ account.currency }}</p>
+      </ion-item>
+    </ion-card>
+    }
+  </div>
+</ion-content>

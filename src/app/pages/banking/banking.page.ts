@@ -5,18 +5,26 @@ import {
   IonIcon,
   IonCard,
   IonCardContent,
-  IonList, IonGrid, IonRow, IonCol } from '@ionic/angular/standalone';
+  IonList,
+  IonGrid,
+  IonRow,
+  IonCol,
+} from '@ionic/angular/standalone';
 import { Card } from 'src/app/types/card';
 import { Transaction } from 'src/app/types/transaction';
 import { Menu } from 'src/app/types/menu';
 import { TransactionCardComponent } from '../shares/transaction-card/transaction-card.component';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-banking',
   templateUrl: './banking.page.html',
   styleUrls: ['./banking.page.scss'],
   standalone: true,
-  imports: [IonCol, IonRow, IonGrid, 
+  imports: [
+    IonCol,
+    IonRow,
+    IonGrid,
     IonList,
     IonCardContent,
     IonCard,
@@ -24,6 +32,7 @@ import { TransactionCardComponent } from '../shares/transaction-card/transaction
     IonAvatar,
     IonContent,
     TransactionCardComponent,
+    RouterLink
   ],
 })
 export class BankingPage implements OnInit {
@@ -49,12 +58,12 @@ export class BankingPage implements OnInit {
   ];
 
   menuItems: Menu[] = [
-    { label: 'Accounts', icon: 'person-outline' },
-    { label: 'Fund Transfer', icon: 'swap-horizontal-outline' },
-    { label: 'Statement', icon: 'document-text-outline' },
-    { label: 'Loans', icon: 'cash-outline' },
-    { label: 'Deposit', icon: 'wallet-outline' },
-    { label: 'More', icon: 'ellipsis-horizontal-outline' },
+    { label: 'Accounts', icon: 'person-outline', route: '../account-list' },
+    { label: 'Fund Transfer', icon: 'swap-horizontal-outline', route: '../fund-transfer' },
+    { label: 'Statement', icon: 'document-text-outline', route: '../statement' },
+    { label: 'Loans', icon: 'cash-outline', route: '../loan' },
+    { label: 'Deposit', icon: 'wallet-outline', route: '../deposit' },
+    { label: 'More', icon: 'ellipsis-horizontal-outline', route: '' },
   ];
 
   transactions: Transaction[] = [

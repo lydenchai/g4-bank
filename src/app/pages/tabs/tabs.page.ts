@@ -59,11 +59,20 @@ export class TabsPage implements OnInit, OnDestroy {
   constructor(private router: Router) {}
 
   ngOnInit(): void {
+    const hiddenRoutes = [
+      'account-list',
+      'account-detail',
+      'fund-transfer',
+      'statement',
+      'loan',
+      'deposit',
+    ];
+
     this.router.events.pipe(takeUntil(this.unsubscribe$)).subscribe((event) => {
       if (event instanceof NavigationEnd) {
         const segments = event.url.split('/');
         const lastSegment = segments.pop();
-        this.showTabs = isNaN(Number(lastSegment));
+        this.showTabs = !hiddenRoutes.includes(lastSegment ?? '');
       }
     });
   }
