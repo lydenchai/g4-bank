@@ -28,7 +28,7 @@
     <ion-card routerLink="../account-detail">
       <ion-item lines="none" [style.border-left]="'10px solid ' +  account.color">
         <ion-label>
-          <span>{{ account.name }}</span>
+          <span class="acc-name">{{ account.name }}</span>
           <p>{{ account.number }} | {{ account.name }}</p>
         </ion-label>
         <p>{{ formatNumber(account.balance) }} {{ account.currency }}</p>

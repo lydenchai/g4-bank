@@ -1,12 +1,11 @@
 <ion-content [fullscreen]="true">
-  <div class="header ion-padding">
-    <ion-header collapse="condense">
-      <ion-toolbar class="ion-no-padding">
-        <h4>Transactions</h4>
-      </ion-toolbar>
-    </ion-header>
+  <div class="head-content">
+    <div class="header ion-padding">
+      <ion-buttons>
+        <ion-label>Transactions</ion-label>
+      </ion-buttons>
+    </div>
   </div>
-
   @for (section of transactionSections; track $index) {
   <h6 class="ion-padding-start ion-no-margin">{{ section.title }}</h6>
   <ion-card class="transaction-content">

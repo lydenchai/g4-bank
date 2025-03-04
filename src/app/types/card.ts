@@ -3,4 +3,5 @@ export interface Card {
   number: string;
   holder: string | number;
   expiryDate: string | number;
+  color?: string | number;
 }

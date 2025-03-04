@@ -27,12 +27,20 @@ import { RouterLink } from '@angular/router';
 export class AccountListPage implements OnInit {
   accounts: any[] = [
     {
+      name: 'Payroll',
+      number: '019236437',
+      balance: 123456789,
+      currency: 'KHR',
+      type: 'payroll',
+      color: '#004da5',
+    },
+    {
       name: 'Visa',
       number: '002512231',
       balance: 617283,
       currency: 'USD',
       type: 'visa',
-      color: '#024260',
+      color: '#11234f',
     },
     {
       name: 'Saving',
@@ -41,14 +49,6 @@ export class AccountListPage implements OnInit {
       currency: 'USD',
       type: 'saving',
       color: '#5b00a5',
-    },
-    {
-      name: 'Payroll',
-      number: '019236437',
-      balance: 123456789,
-      currency: 'KHR',
-      type: 'payroll',
-      color: '#004da5',
     },
   ];
 
