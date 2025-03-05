@@ -6,6 +6,17 @@
         <ion-label>Account Details</ion-label>
       </ion-buttons>
     </div>
+    <div class="balance ion-padding">
+      <div class="acc-type">
+        <ion-label class="type">Payroll</ion-label>
+        <ion-label class="label-title">019236437 | Payroll</ion-label>
+      </div>
+      <div class="total-amount">
+        <ion-label class="label-title">AVAILABLE BALANCE</ion-label>
+        <ion-label class="label-amount">123,456,789,00 USD</ion-label>
+        <ion-label class="label-title" [color]="'#000'">Account Balance: 123,456,789,00 USD</ion-label>
+      </div>
+    </div>
   </div>
   @for (section of transactionSections; track $index) {
   <h6 class="ion-padding-start ion-no-margin">{{ section.title }}</h6>

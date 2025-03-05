@@ -15,6 +15,6 @@ export class NotFoundPage implements OnInit {
   ngOnInit() {}
 
   onBack() {
-    this.router.navigate(['/login']);
+    this.router.navigate(['/']);
   }
 }

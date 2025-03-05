@@ -1,17 +1,21 @@
-import { Component } from '@angular/core';
-import { IonContent } from '@ionic/angular/standalone';
+import { Component, AfterViewInit } from '@angular/core';
 import { Router } from '@angular/router';
 
+import { IonContent } from '@ionic/angular/standalone';
 @Component({
   selector: 'app-login',
   templateUrl: './login.page.html',
   styleUrls: ['./login.page.scss'],
   imports: [IonContent],
 })
-export class LoginPage {
+export class LoginPage implements AfterViewInit {
   constructor(private router: Router) {}
 
-  goToHome() {
-    this.router.navigate(['/home']);
+  ngAfterViewInit(): void {
+    setTimeout(() => {
+      if (this.router.url === '/login' || this.router.url === '') {
+        this.router.navigate(['/home']);
+      }
+    }, 1000);
   }
 }
