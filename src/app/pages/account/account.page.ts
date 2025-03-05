@@ -29,6 +29,28 @@ import {
   ],
 })
 export class AccountPage implements OnInit {
+  menuList: any[] = [
+    {
+      icon: 'person-outline',
+      label: 'My Profile',
+    },
+    {
+      icon: 'lock-closed-outline',
+      label: 'Security',
+    },
+    {
+      icon: 'globe',
+      label: 'Language',
+    },
+    {
+      icon: 'call-outline',
+      label: 'Contact Us',
+    },
+    {
+      icon: 'reader-outline',
+      label: 'Term & Condition',
+    },
+  ];
   constructor() {}
 
   ngOnInit() {}

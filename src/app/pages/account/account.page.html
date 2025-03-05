@@ -1,9 +1,3 @@
-<!-- <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>Profile</ion-title>
-  </ion-toolbar>
-</ion-header> -->
-
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar class="ion-no-padding">
@@ -28,51 +22,22 @@
       </ion-item>
     </ion-list>
   </ion-card>
-  <ion-card>
-    <ion-list lines="none">
-      <ion-item>
-        <div class="icon notification">
-          <ion-icon aria-hidden="true" name="lock-closed-outline" slot="start"></ion-icon>
-        </div>
-        <ion-label>Security</ion-label>
-        <ion-icon name="chevron-forward-outline"></ion-icon>
-      </ion-item>
-    </ion-list>
-  </ion-card>
+  @for (menu of menuList; track $index) {
   <ion-card>
     <ion-list lines="none">
       <ion-item>
         <div class="icon language">
-          <ion-icon aria-hidden="true" name="globe" slot="start"></ion-icon>
+          <ion-icon aria-hidden="true" [name]="menu.icon" slot="start"></ion-icon>
         </div>
-        <ion-label>Language</ion-label>
-        <div style="display: flex;">
+        <ion-label>{{menu.label}}</ion-label>
+        <div class="flex">
+          @if (menu.label === "Language") {
           <ion-label style="color: #dbdbdb;">English</ion-label>
+          }
           <ion-icon name="chevron-forward-outline"></ion-icon>
         </div>
       </ion-item>
     </ion-list>
   </ion-card>
-  <ion-card>
-    <ion-list lines="none">
-      <ion-item>
-        <div class="icon language">
-          <ion-icon aria-hidden="true" name="call-outline" slot="start"></ion-icon>
-        </div>
-        <ion-label>Contact Us</ion-label>
-        <ion-icon name="chevron-forward-outline"></ion-icon>
-      </ion-item>
-    </ion-list>
-  </ion-card>
-  <ion-card>
-    <ion-list lines="none">
-      <ion-item>
-        <div class="icon question">
-          <ion-icon aria-hidden="true" name="reader-outline" slot="start"></ion-icon>
-        </div>
-        <ion-label>Term & Condition</ion-label>
-        <ion-icon name="chevron-forward-outline"></ion-icon>
-      </ion-item>
-    </ion-list>
-  </ion-card>
+  }
 </ion-content>

@@ -32,11 +32,17 @@ import { RouterLink } from '@angular/router';
     IonAvatar,
     IonContent,
     TransactionCardComponent,
-    RouterLink
+    RouterLink,
   ],
 })
 export class BankingPage implements OnInit {
   cards: Card[] = [
+    {
+      type: 'payroll',
+      number: '**** **** **** 1234',
+      holder: 'Zhao Lusi',
+      expiryDate: '12/30',
+    },
     {
       type: 'visa',
       number: '**** **** **** 1234',
@@ -49,18 +55,20 @@ export class BankingPage implements OnInit {
       holder: 'Zhao Lusi',
       expiryDate: '12/26',
     },
-    {
-      type: 'payroll',
-      number: '**** **** **** 1234',
-      holder: 'Zhao Lusi',
-      expiryDate: '12/30',
-    },
   ];
 
   menuItems: Menu[] = [
     { label: 'Accounts', icon: 'person-outline', route: '../account-list' },
-    { label: 'Fund Transfer', icon: 'swap-horizontal-outline', route: '../fund-transfer' },
-    { label: 'Statement', icon: 'document-text-outline', route: '../statement' },
+    {
+      label: 'Fund Transfer',
+      icon: 'swap-horizontal-outline',
+      route: '../fund-transfer',
+    },
+    {
+      label: 'Statement',
+      icon: 'document-text-outline',
+      route: '../statement',
+    },
     { label: 'Loans', icon: 'cash-outline', route: '../loan' },
     { label: 'Deposit', icon: 'wallet-outline', route: '../deposit' },
     { label: 'More', icon: 'ellipsis-horizontal-outline', route: '' },
@@ -88,8 +96,7 @@ export class BankingPage implements OnInit {
       date: '02 March 2025',
     },
     {
-      profile:
-        'https://i.pinimg.com/736x/53/6b/f6/536bf6ce27c9da001fa7ff45af393693.jpg',
+      profile: '',
       name: 'TikTok Payments',
       amount: -50,
       date: '02 March 2025',

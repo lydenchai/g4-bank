@@ -1,6 +1,6 @@
 <ion-item lines="none">
   <ion-avatar slot="start">
-    <img alt="Silhouette of mountains" [src]="data.profile" />
+    <img alt="" [src]="data.profile" [class]="data.profile ? 'profile' : 'no-profile'" />
   </ion-avatar>
   <div [class]="lastIndex ? 'last-transaction':'transaction'">
     <div>

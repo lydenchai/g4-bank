@@ -6,6 +6,9 @@ import {
   IonCard,
   IonCardContent,
   IonList,
+  IonLabel,
+  IonButtons,
+  IonIcon,
 } from '@ionic/angular/standalone';
 import { Transaction } from 'src/app/types/transaction';
 import { TransactionCardComponent } from '../shares/transaction-card/transaction-card.component';
@@ -16,6 +19,9 @@ import { TransactionCardComponent } from '../shares/transaction-card/transaction
   styleUrls: ['./transaction.page.scss'],
   standalone: true,
   imports: [
+    IonIcon,
+    IonButtons,
+    IonLabel,
     IonList,
     IonCardContent,
     IonCard,

@@ -8,7 +8,7 @@
   display: flex;
   align-items: start;
   justify-content: space-between;
-  background: linear-gradient(135deg, #024260, #000000);
+  background: #11234f;
 
   .profile {
     display: flex;
@@ -47,7 +47,7 @@
 
     ion-icon {
       font-size: 20px;
-      color: #0b6996;
+      color: #11234f;
     }
   }
 }
@@ -80,7 +80,7 @@
     min-width: 320px;
     height: 160px;
     padding: 16px;
-    background: linear-gradient(135deg, #131313, #460808, #004363);
+    background: linear-gradient(135deg, #0954b7, #11234f);
     border-radius: 16px;
     color: white;
     display: flex;
@@ -157,7 +157,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #024260, #033247);
+    background: #11234f;
 
     ion-icon {
       color: #fff;
